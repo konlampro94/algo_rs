@@ -1,6 +1,6 @@
 
 // Returns the index of the position in the array
-fn elem_search(arr: &Vec<i32>, elem: i32) -> Option<usize> 
+fn elem_search<T: PartialEq + Copy>(arr: &Vec<T>, elem: T) -> Option<usize> 
 {
     for (i, &pair) in arr.iter().enumerate() 
     {
@@ -13,10 +13,10 @@ fn elem_search(arr: &Vec<i32>, elem: i32) -> Option<usize>
 }
 
 // performs the classic Bubblesort algorithm
-fn bubblesort(arr: &mut Vec<i32>) ->  &Vec<i32>
+fn bubblesort<T: PartialOrd + std::fmt::Debug + Copy>(arr: &mut Vec<T>) ->  &Vec<T>
 {
 
-    let mut _temp = 0;
+    let mut _temp = arr[0];
     let  arr_len = arr.len();
     for i in 0..arr_len
     {
