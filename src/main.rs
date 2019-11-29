@@ -63,6 +63,9 @@ mod tests {
         let test_vec : Vec<i32> =  vec![1, 2, 3, 4, 5];
         assert_eq!(bubblesort(&mut vec![5, 4, 3, 2, 1]), &test_vec);
         assert_ne!(bubblesort(&mut vec![5, 3, 3, 2, 1]), &test_vec);
+        let vec_f32 : Vec<f32> = vec![1.4, 3.2, 5.7, 7.8];
+        assert_eq!(bubblesort(&mut vec![1.4, 5.7, 3.2, 7.8]), &vec_f32);
+
     }
     #[test]
     fn elem_search_works() 
