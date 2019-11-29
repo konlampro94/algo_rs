@@ -47,11 +47,10 @@ fn main()
     
     println!("\nMain: => Array contents => {:?}", v);
 
-    match  elem_search(&v, 67) {
+    match elem_search(&v, 67) {
         Some(num) => println!("Element [{}] exists!!", num),
         None  => println!("Element does't exist in the array!"),
     }
-
 }
 
 
@@ -70,5 +69,6 @@ mod tests {
     {
         let test_vec : Vec<i32> =  vec![1, 2, 3, 4, 5];
         assert_eq!(elem_search(&test_vec, 3), Some(2));
+        assert_eq!(elem_search(&test_vec, 39), None);
     }
 }
