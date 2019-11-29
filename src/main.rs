@@ -2,9 +2,9 @@
 // Returns the index of the position in the array
 fn elem_search(arr: &Vec<i32>, elem: i32) -> Option<usize> 
 {
-    for (i, pair) in arr.iter().enumerate() 
+    for (i, &pair) in arr.iter().enumerate() 
     {
-        if *pair == elem 
+        if pair == elem 
         {
             return Some(i)
         } 
