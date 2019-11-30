@@ -1,4 +1,3 @@
-use std::fmt::Debug;
 
 
 fn selection_sort<T: PartialOrd + Copy>(arr: &mut Vec<T>) -> &Vec<T>
