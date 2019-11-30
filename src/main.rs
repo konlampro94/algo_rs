@@ -1,22 +1,25 @@
 use std::fmt::Debug;
 
 
-fn selection_sort<T: PartialOrd + Copy>(arr: &mut Vec<T>) -> &Vec<T>{
+fn selection_sort<T: PartialOrd + Copy>(arr: &mut Vec<T>) -> &Vec<T>
+{
     
     let mut _temp = arr[0];
     let mut _min = 0;
     
-    for i in 0..arr.len() {
+    for i in 0..arr.len() 
+    {
         _min = i;
-        for j in i+1..arr.len(){
-            if arr[j] < arr[_min] {
+        for j in i+1..arr.len()
+        {
+            if arr[j] < arr[_min] 
+            {
                 _min = j;
             }
         }
         _temp = arr[i];
         arr[i] = arr[_min];
         arr[_min] = _temp;
-
     }
     arr
 }
