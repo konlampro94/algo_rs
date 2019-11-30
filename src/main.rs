@@ -1,5 +1,7 @@
+use std::fmt::Debug;
 
-// Returns the index of the position in the array
+
+/// Returns the index of the position in the array
 fn elem_search<T: PartialEq + Copy>(arr: &Vec<T>, elem: T) -> Option<usize> 
 {
     for (i, &pair) in arr.iter().enumerate() 
@@ -12,8 +14,9 @@ fn elem_search<T: PartialEq + Copy>(arr: &Vec<T>, elem: T) -> Option<usize>
     None
 }
 
-// performs the classic Bubblesort algorithm
-fn bubblesort<T: PartialOrd + std::fmt::Debug + Copy>(arr: &mut Vec<T>) ->  &Vec<T>
+
+/// performs the classic Bubblesort algorithm
+fn bubblesort<T: PartialOrd + Debug + Copy>(arr: &mut Vec<T>) ->  &Vec<T>
 {
 
     let mut _temp = arr[0];
