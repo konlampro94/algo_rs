@@ -1,5 +1,7 @@
 use std::fmt::Debug;
 
+/// 
+mod ins_sort;
 
 /// Returns the index of the position in the array
 fn elem_search<T: PartialEq + Copy>(arr: &Vec<T>, elem: T) -> Option<usize> 
@@ -54,6 +56,7 @@ fn main()
         Some(num) => println!("Element [{}] exists!!", num),
         None  => println!("Element does't exist in the array!"),
     }
+    ins_sort::insertion_sort();
 }
 
 
