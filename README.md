@@ -4,9 +4,11 @@
 ### [Sorting algorithms]
 <hr>
 
-[Bubblesort](Bubblesort)
+[Bubblesort](src/main.rs)
 
-[Insertion sort]()
+[Insertion sort](src/main.rs)
+
+[Selection sort](src/main.rs)
 
 ### [Search]
 <hr>
